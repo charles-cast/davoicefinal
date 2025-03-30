@@ -1,0 +1,195 @@
+.page-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #121212;
+}
+
+.login-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-form-wrapper {
+  width: 100%;
+  max-width: 600px;
+  padding: 40px 0;
+  margin-top: 4rem;
+  margin-bottom: 200px;
+  margin-left: 300px;
+}
+
+.logo-container {
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+}
+
+.title-section {
+  margin-bottom: 40px;
+  padding-right: 20px;
+}
+
+h1 {
+  color: #FAFAFA;
+  font-size: 36px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.subtitle {
+  color: #FAFAFA;
+  font-size: 16px;
+  margin-top: 0;
+  text-align: left;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.vector-logo {
+  width: 132px;
+  height: 122px;
+  transition: all 0.5s ease;
+  margin-right: 70rem;
+  margin-top: 38rem;
+}
+
+/* Base state - all elements white */
+.logo circle,
+.logo path {
+  transition: all 0.5s ease;
+}
+
+/* Partial highlight - only first two dots purple */
+.partial-highlight .vector-logo circle:nth-child(2),
+.partial-highlight .vector-logo circle:nth-child(3) {
+  fill: #8377FB;
+}
+
+.partial-highlight .vector-logo {
+  filter: drop-shadow(0 0 10px rgba(131, 119, 251, 0.3));
+}
+
+/* Full highlight - all dots and logo path purple */
+.full-highlight .vector-logo circle {
+  fill: #8377FB;
+}
+
+.full-highlight .vector-logo path {
+  fill: #8377FB;
+}
+
+.full-highlight .vector-logo {
+  filter: drop-shadow(0 0 10px rgba(131, 119, 251, 0.5));
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+  padding-right: 20px;
+}
+
+label {
+  display: block;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-align: left;
+  padding-left: 0;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 12px 25px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: #FAFAFA;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  height: 55px;
+  text-indent: 15px;
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 25px center;
+  background-size: 16px;
+  padding-right: 50px;
+  height: 55px;
+  text-indent: 15px;
+}
+
+select:focus,
+input:focus {
+  border-color: #FAFAFA;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+select:hover,
+input:hover {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.submit-button {
+  width: 97%;
+  padding: 12px;
+  background: linear-gradient(#8ED6FF, #8377FB, #AAA9FA);
+  color: #FAFAFA;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+}
+
+.submit-button:hover {
+  opacity: 0.9;
+}
+
+/* Placeholder styling */
+input::placeholder {
+  color: #666;
+  text-indent: 15px;
+}
+
+/* Remove default focus outline and add custom one */
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(108, 92, 231, 0.2);
+} 

@@ -1,0 +1,180 @@
+.info-page {
+  min-height: 100vh;
+  height: 100%;
+  background-color: #121212;
+  padding-top: 60px;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.page-indicator {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #060606;
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 30px;
+  background-color: #FAFAFA;
+  z-index: 1000;
+  margin-top: 5rem;
+}
+
+.info-container {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #121212;
+  min-height: calc(100vh - 60px);
+  overflow-x: hidden;
+  position: relative;
+}
+
+.section-title {
+  color: #FAFAFA;
+  font-size: 2.5rem;
+  margin-top: 8rem;
+  margin-bottom: -3rem;
+  text-align: left;
+  padding-left: 4rem;
+  position: relative;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.updates-grid {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  gap: 0;
+  margin-top: -4rem;
+  padding: 0;
+  flex: 1;
+  min-height: 100%;
+  background-color: #121212;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.update-card {
+  width: 33.33vw;
+  height: 100%;
+  min-height: calc(100vh - 60px);
+  overflow: hidden;
+  position: relative;
+  background-color: #121212;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 8rem;
+  margin: 0;
+}
+
+.update-card:first-child {
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.update-card:last-child {
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.update-image {
+  width: 85%;
+  height: auto;
+  object-fit: contain;
+  background-color: transparent;
+  display: block;
+  margin: auto;
+  max-height: 400px;
+  min-height: 400px;
+  position: relative;
+  top: -2rem;
+}
+
+/* Specific dimensions for the first image */
+.update-card:first-child .update-image {
+  width: 782.33px;
+  height: 405px;
+  max-height: 405px;
+  min-height: 405px;
+  object-fit: contain;
+}
+
+/* Specific dimensions for the second image */
+.update-card:nth-child(2) .update-image {
+  width: 568.03px;
+  height: 405px;
+  max-height: 405px;
+  min-height: 405px;
+  object-fit: contain;
+  margin-left: 3rem;
+}
+
+/* Specific dimensions for the third image */
+.update-card:nth-child(3) .update-image {
+  width: 578.29px;
+  height: 418px;
+  max-height: 418px;
+  min-height: 418px;
+  object-fit: contain;
+}
+
+.update-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  color: #FAFAFA;
+}
+
+.update-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #FFD700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.subtitle-line {
+  font-size: 1.2rem;
+  margin: 0.25rem 0;
+  color: #FAFAFA;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.highlight {
+  font-size: 2rem;
+  color: #FFD700;
+  margin-top: 1rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.content {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #FAFAFA;
+  max-width: 90%;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  margin: 0 auto;
+  text-align: center;
+} 

@@ -1,0 +1,91 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #121212;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+.nav-vector-logo {
+  width: 40px;
+  height: 36px;
+  transition: all 0.3s ease;
+}
+
+/* Only apply glow effect when on home page */
+.home-page .nav-vector-logo {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4))
+         drop-shadow(0 0 12px rgba(255, 255, 255, 0.3))
+         drop-shadow(0 0 16px rgba(255, 255, 255, 0.2));
+  animation: logoGlow 2s infinite ease-in;
+}
+
+@keyframes logoGlow {
+  0% {
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4))
+           drop-shadow(0 0 12px rgba(255, 255, 255, 0.3))
+           drop-shadow(0 0 16px rgba(255, 255, 255, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5))
+           drop-shadow(0 0 15px rgba(255, 255, 255, 0.4))
+           drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+  }
+  100% {
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4))
+           drop-shadow(0 0 12px rgba(255, 255, 255, 0.3))
+           drop-shadow(0 0 16px rgba(255, 255, 255, 0.2));
+  }
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #FAFAFA;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-links a:hover {
+  color: #FAFAFA;
+}
+
+.nav-links a.active {
+  color: #FAFAFA;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
+               0 0 25px rgba(255, 255, 255, 0.6),
+               0 0 35px rgba(255, 255, 255, 0.4);
+}
+
+.logout-btn {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: #FAFAFA;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: transparent;
+  border-color: #FAFAFA;
+  color: #FAFAFA;
+} 
